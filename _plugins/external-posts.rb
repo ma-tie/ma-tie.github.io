@@ -32,4 +32,5 @@ module ExternalPosts
       end
     end
   end
+
 end

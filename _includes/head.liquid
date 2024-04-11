@@ -3,22 +3,17 @@
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
+<!-- <link rel="stylesheet" href="{{ '/assets/css/mdb.min.css' | relative_url | bust_file_cache }}"> -->
 <link
   rel="stylesheet"
-  href="{{ site.third_party_libraries.mdb.url.css }}"
-  integrity="{{ site.third_party_libraries.mdb.integrity.css }}"
+  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{ site.mdb.version }}/css/mdb.min.css"
+  integrity="{{ site.mdb.integrity.css }}"
   crossorigin="anonymous"
 >
 
 <!-- Bootstrap Table -->
 {% if page.pretty_table %}
-  <link
-    defer
-    rel="stylesheet"
-    href="{{ site.third_party_libraries.bootstrap-table.url.css }}"
-    integrity="{{ site.third_party_libraries.bootstrap-table.integrity.css }}"
-    crossorigin="anonymous"
-  >
+  <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@{{ site.bootstrap-table.version }}/dist/bootstrap-table.min.css">
 {% endif %}
 
 <!-- Fonts & Icons -->
@@ -27,7 +22,7 @@
   defer
   rel="stylesheet"
   type="text/css"
-  href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
 >
 
 <!-- Code Syntax Highlighting -->
@@ -57,7 +52,6 @@
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- Dark Mode -->
-<script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% if site.enable_darkmode %}
   <link
     defer
@@ -66,9 +60,7 @@
     media="none"
     id="highlight_theme_dark"
   >
-  <script>
-    initTheme();
-  </script>
+  <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
 <!-- GeoJSON support via Leaflet -->
@@ -76,9 +68,9 @@
   <link
     defer
     rel="stylesheet"
-    href="{{ site.third_party_libraries.leaflet.url.css }}"
-    integrity="{{ site.third_party_libraries.leaflet.integrity.css }}"
-    crossorigin="anonymous"
+    href="https://unpkg.com/leaflet@{{ site.leaflet.version }}/dist/leaflet.css"
+    integrity="{{ site.leaflet.integrity.css }}"
+    crossorigin=""
   >
 {% endif %}
 
@@ -87,24 +79,24 @@
   <link
     defer
     rel="stylesheet"
-    href="{{ site.third_party_libraries.highlightjs.url.css.light }}"
-    integrity="{{ site.third_party_libraries.highlightjs.integrity.css.light }}"
+    href="https://cdn.jsdelivr.net/npm/highlight.js@{{ site.highlightjs.version }}/styles/github.min.css"
+    integrity="{{ site.highlightjs.integrity.css.light }}"
     crossorigin="anonymous"
     media="screen and (prefers-color-scheme: light)"
   >
   <link
     defer
     rel="stylesheet"
-    href="{{ site.third_party_libraries.highlightjs.url.css.dark }}"
-    integrity="{{ site.third_party_libraries.highlightjs.integrity.css.dark }}"
+    href="https://cdn.jsdelivr.net/npm/highlight.js@{{ site.highlightjs.version }}/styles/github-dark.min.css"
+    integrity="{{ site.highlightjs.integrity.css.dark }}"
     crossorigin="anonymous"
     media="screen and (prefers-color-scheme: dark)"
   >
   <link
     defer
     rel="stylesheet"
-    href="{{ site.third_party_libraries.diff2html.url.css }}"
-    integrity="{{ site.third_party_libraries.diff2html.integrity.css }}"
+    href="https://cdn.jsdelivr.net/npm/diff2html@{{ site.diff2html.version }}/bundles/css/diff2html.min.css"
+    integrity="{{ site.diff2html.integrity.css }}"
     crossorigin="anonymous"
   >
 {% endif %}
@@ -115,7 +107,7 @@
     <link
       defer
       rel="stylesheet"
-      href="{{ site.third_party_libraries.img-comparison-slider.url.css }}"
+      href="https://cdn.jsdelivr.net/npm/img-comparison-slider@{{ site.img-comparison-slider.version }}/dist/styles.min.css"
     >
   {% endif %}
   <!-- Image slider -->
@@ -123,8 +115,8 @@
     <link
       defer
       rel="stylesheet"
-      href="{{ site.third_party_libraries.swiper.url.css }}"
-      integrity="{{ site.third_party_libraries.swiper.integrity.css }}"
+      href="https://cdn.jsdelivr.net/npm/swiper@{{ site.swiper.version }}/swiper-bundle.min.css"
+      integrity="{{ site.swiper.integrity.css }}"
       crossorigin="anonymous"
     >
   {% endif %}
