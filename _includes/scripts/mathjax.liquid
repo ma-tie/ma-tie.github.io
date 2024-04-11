@@ -1,0 +1,17 @@
+{% if site.enable_math %}
+  <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+      },
+    };
+  </script>
+  <script
+    defer
+    type="text/javascript"
+    id="MathJax-script"
+    src="{{ site.third_party_libraries.mathjax.url.js }}"
+  ></script>
+  <script defer src="{{ site.third_party_libraries.polyfill.url.js }}"></script>
+{% endif %}
