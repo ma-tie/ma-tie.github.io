@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉I received the NSDI '24 Student Grant.
+🎉 I received the NSDI '24 Student Grant.

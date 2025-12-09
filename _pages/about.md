@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 
 Hi, my name is Tie Ma (马铁).
 
-I am a third-year Ph.D. student in the School of Computer Science and Engineering at the [Beihang University](https://ev.buaa.edu.cn/) (BUAA), advised by Prof. [Shan Zhang](https://scholar.google.com/citations?user=Low-un4AAAAJ) and [Hongbin Luo](https://scholar.google.com/citations?user=aaEjzHMAAAAJ). My research interests are broadly in computer networks. I am a visiting student at [KAUST](https://www.kaust.edu.sa/) since September 2025, advised by Prof. [Marco Canini](https://mcanini.github.io/). 
+I am a third-year Ph.D. student in the School of Computer Science and Engineering at [Beihang University](https://ev.buaa.edu.cn/) (BUAA), advised by Prof. [Shan Zhang](https://scholar.google.com/citations?user=Low-un4AAAAJ) and [Hongbin Luo](https://scholar.google.com/citations?user=aaEjzHMAAAAJ). Currently, my research interests are agentic AI, network emulation, and edge computing. I am a visiting student at [KAUST](https://www.kaust.edu.sa/) since September 2025, advised by Prof. [Marco Canini](https://mcanini.github.io/). 
 
 Prior to Beihang University, I received my M.S. from [University of Electronic Science and Technology of China](https://en.uestc.edu.cn/) (UESTC) in 2023, under the guidance of Prof. [Hongfang Yu](https://scholar.google.com/citations?user=GmEdMqwAAAAJ) and [Long Luo](https://scholar.google.com/citations?user=rcqa1EEAAAAJ). I received my B.S. from [Xidian University](https://en.xidian.edu.cn/) in 2020.
 

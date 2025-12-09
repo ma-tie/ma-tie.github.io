@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉First version of homepage!
+🎉 First version of homepage!
