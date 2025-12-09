@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Our paper "Following the Usage, Not the Request: Risk-Aware Task Scheduling with Overbooking in Edge Clouds" is accepted to IEEE INFOCOM 2026.
+🎉 Our paper "Following the Usage, Not the Request: Risk-Aware Task Scheduling with Overbooking in Edge Clouds" is accepted to **IEEE INFOCOM 2026**.

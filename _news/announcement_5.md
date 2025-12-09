@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Our paper "Doing more with less: Balancing probing costs and task offloading efficiency at the network edge" is accepted to IEEE TPDS.
+🎉 Our paper "Doing more with less: Balancing probing costs and task offloading efficiency at the network edge" is accepted to **IEEE TPDS**.

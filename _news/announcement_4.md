@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 I received the CSC（China Scholarship Council）scholarship.
+🎉 I received the **CSC（China Scholarship Council）scholarship**.
