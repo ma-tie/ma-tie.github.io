@@ -1,5 +1,5 @@
 ---
 layout: page
-title: news
-permalink: /news/
+title: projects
+permalink: /projects/
 ---

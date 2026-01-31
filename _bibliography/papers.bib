@@ -4,6 +4,7 @@
 @misc{ma2026maestromultiagentevaluationsuite,
       abbr={arXiv},
       selected={true},
+      abstract={We present MAESTRO, an evaluation suite for the testing, reliability, and observability of LLM-based MAS. MAESTRO standardizes MAS configuration and execution through a unified interface, supports integrating both native and third-party MAS via a repository of examples and lightweight adapters, and exports framework-agnostic execution traces together with system-level signals (e.g., latency, cost, and failures). We instantiate MAESTRO with 12 representative MAS spanning popular agentic frameworks and interaction patterns, and conduct controlled experiments across repeated runs, backend models, and tool configurations. Our case studies show that MAS executions can be structurally stable yet temporally variable, leading to substantial run-to-run variance in performance and reliability. We further find that MAS architecture is the dominant driver of resource profiles, reproducibility, and cost-latency-accuracy trade-off, often outweighing changes in backend models or tool settings. Overall, MAESTRO enables systematic evaluation and provides empirical guidance for designing and optimizing agentic systems.},
       title={MAESTRO: Multi-Agent Evaluation Suite for Testing, Reliability, and Observability}, 
       author={Tie Ma and Yixi Chen and Vaastav Anand and Alessandro Cornacchia and Amândio R. Faustino and Guanheng Liu and Shan Zhang and Hongbin Luo and Suhaib A. Fahmy and Zafar A. Qazi and Marco Canini},
       year={2026},
@@ -11,19 +12,23 @@
       archivePrefix={arXiv},
       primaryClass={cs.NI},
       url={https://arxiv.org/abs/2601.00481}, 
+      pdf={ma2026maestromultiagentevaluationsuite.pdf}
 }
 
 @INPROCEEDINGS{tie2026overbooking,
   abbr={INFOCOM},
   selected={true},
+  abstract={Edge computing platforms are increasingly deployed to support delay-sensitive and resource-intensive applications. However, current task scheduling strategies, which rely on user-requested resources, often lead to low resource utilization and reduced platform profit due to users' tendency to over-request resources. Overbooking, widely adopted in industries such as airlines and hotels, can improve utilization but introduce risk under uncertain task resource usage. This paper applies resource overbooking to edge clouds, focusing on task scheduling optimization under uncertainty. We formulate the problem as a stochastic mixed integer program, which is proven to be NP-hard. To this end, a risk evaluation scheme is proposed to accurately quantify the risk of overload without assuming specific resource usage distributions, which has an additive error guarantee. Based on this scheme, we transform the problem into a more deterministic form and prove that the objective function is submodular. This enables us to design a greedy algorithm that achieves a ((1-1/e))-approximation ratio with lower complexity. Extensive experiments on a real-world dataset demonstrate that the proposed algorithm significantly improves profit by 0.23(\times)-3.35(\times) and resource utilization by 0.16(\times)-0.75(\times) while accurately controlling the risk associated with overbooking.},
   author={Ma, Tie and Zhang, Shan and Zhang, Xiaoyu and Zheng, Zichuan and Wang, Zhiyuan and Luo, Hongbin},
   booktitle={IEEE Conference on Computer Communications (INFOCOM)}, 
   title={Following the Usage, Not the Request: Risk-Aware Task Scheduling with Overbooking in Edge Clouds}, 
   year={2026},
+  pdf={tie2026overbooking.pdf}
   }
 
 @inproceedings{tie2023klonet,
   abbr={NSDI},
+  abstract={Currently, one of the simplest and most effective ways for people to gain an in-depth understanding of computer networks is through hands-on practice and experimentation on software platforms. While education is important for the field of computer networks, existing platforms are inadequate in usability and scalability, failing to fully meet all the teaching needs of computer networking education. This paper describes our experiences in designing and using Klonet, an emulation platform for computer networking education. Klonet is easy-to-use for both students and tutors, which has been carefully designed to lower the barrier to use, thus making the practice more efficient. Klonet also demonstrates good scalability. It adopts a container-based distributed architecture and a virtual network embedding algorithm customized for this platform. Evaluation experiments show that Klonet exhibits better scalability, such as supporting more students with fewer hardware resources (i.e., servers) and deploying virtual network topologies more quickly. Furthermore, to ensure stability during teaching, Klonet enhances the robustness of its upper orchestrator and underlying virtual networks. So far, Klonet has been adopted in 3 universities and 4 courses, serving more than 800 students. We showcase Klonet's usefulness in networking education with real use cases, including a scenario with ~10,000 emulated routers. We also share our lessons learned from the 4 years of Klonet development and 2 years of operations.},
   selected={true},
   html={https://www.usenix.org/conference/nsdi24/presentation/ma},
   title={Klonet: an Easy-to-Use and Scalable Platform for Computer Networks Education},
@@ -31,14 +36,13 @@
   booktitle={USENIX Symposium on Networked Systems Design and Implementation (NSDI)},
   pages={},
   year={2024},
-
+  pdf={tie2023klonet.pdf}
 }
 
 @misc{hongfang2023network,
   abbr={US Patent},
   abstract={A network emulation system supporting a flexible and efficient dynamic experiment emulates a network based on container, veth-pair, traffic control (TC), and other technologies and sets a network state management model based on a key-value pair, thereby constructing a network emulation system supporting a flexible and efficient dynamic experiment. The system flexibly realizes the dynamic performance of a plurality of dimensions, namely, dynamic node start/stop, dynamic node attribute configuration, dynamic link start/stop, and dynamic link attribute configuration. Based on the network state management model, the network emulation system provides a concise and unified dynamic application programming interface (API) for an upper layer. Researchers can call the API in their network innovation programs at any time after an emulation network is deployed to achieve efficient, batch-processing, and programmable dynamic management. The network emulation system greatly facilitates the experimental work of the researchers in a dynamic scenario of the network.},
   html={https://patents.google.com/patent/US20230327973A1/en},
-  bibtex_show={true},
   title={Network emulation system supporting flexible and efficient dynamic experiment},
   author={Yu, Hongfang and Sun, Gang and Ma, Tie and MA, Chongxi and Xie, Yunhan},
   year={2023},
@@ -62,7 +66,7 @@
   doi={10.1109/IWQoS54832.2022.9812867}
   }
 
-@INPROCEEDINGS{10000703,
+@INPROCEEDINGS{tie2022vnetradar,
   abbr={GLOBECOM},
   abstract={Measuring traffic metrics is indispensable in virtual networks as it is the basis for a wide range of applications, such as network diagnostics and performance evaluation of the network algorithms. However, existing measurement schemes fail to have all these excellent characteristics simultaneously: 1) fine-grained, i.e. to obtain per packet level information. 2) lightweight, namely low CPU and bandwidth overhead. 3) network-wide, which means obtaining metrics of the whole network, e.g. per packet path. 4) easy-to-deploy, which refers to deployment without additional modification of Maximum Transmission Units (MTUs). We design vNetRadar, a virtual network measurement system, which has these excellent characteristics simultaneously. Specifically, vNetRadar 1) identifies each packet without increasing the size of each packet, to obtain network-wide metrics without MTU modification, 2) allocates each packet an area in memory, called backpack, and carries metadata in it to largely reduce bandwidth overhead. vNetRadar is implemented based on the extended Berkeley Packet Filter (eBPF) and is mainly in kernel space, avoiding the CPU overhead of copying packets to user space when performing the fine-grained measurement. Evaluation results show that the easy-to-deploy vNetRadar can get fine-grained network-wide metrics with low CPU and bandwidth overhead.},
   bibtex_show={true},
@@ -77,6 +81,7 @@
   pages={5741-5746},
   keywords={Performance evaluation;Area measurement;Bandwidth;Metadata;Size measurement;Global communication;Kernel},
   doi={10.1109/GLOBECOM48099.2022.10000703},
+  pdf={tie2022vnetradar.pdf}
   }
 
 @misc{2022cnpatent,
