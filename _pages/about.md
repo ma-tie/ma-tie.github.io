@@ -24,4 +24,4 @@ Prior to Beihang University, I received my M.S. from [University of Electronic S
 
 Email: matie @AT@ buaa.edu.cn.
 
-📢 **I am currently on the job market and actively seeking research and engineering positions. Please feel free to contact me if you think my background is a good fit.**
+🚀 **I am currently on the job market and actively seeking research and engineering positions. Please feel free to contact me if you think my background is a good fit.**
