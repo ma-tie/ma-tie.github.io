@@ -1,0 +1,8 @@
+{%- assign summary = post.description | default: '' | strip -%}
+{%- if summary == '' -%}
+  {%- assign summary = post.excerpt | strip_html | strip -%}
+  {%- if summary.size < 30 -%}
+    {%- assign summary = post.content | markdownify | strip_html | strip -%}
+  {%- endif -%}
+{%- endif -%}
+{{- summary | normalize_whitespace | truncate: 160 -}}

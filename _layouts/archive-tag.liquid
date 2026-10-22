@@ -7,6 +7,8 @@ layout: default
     <p class="post-description">an archive of posts with this tag</p>
   </header>
 
+  <p><a href="{{ '/blog/' | relative_url }}">← 返回博客</a> &nbsp; · &nbsp; <a href="{{ '/blog/archive/' | relative_url }}">全部归档</a> &nbsp; · &nbsp; {{ page.posts | size }} 篇文章</p>
+
   <article>
     <div class="table-responsive">
       <table class="table table-sm table-borderless">

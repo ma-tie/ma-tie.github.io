@@ -1,20 +1,26 @@
 {% if paginator.total_pages > 1 %}
-  <nav aria-label="Blog page naviation">
+  <nav aria-label="博客分页">
     <ul class="pagination pagination-lg justify-content-center">
       <li class="page-item {% unless paginator.previous_page %}disabled{% endunless %}">
-        <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" tabindex="-1" aria-disabled="{{ paginator.previous_page }}"
-          >Newer</a
-        >
+        {% if paginator.previous_page %}
+          <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}" rel="prev">上一页</a>
+        {% else %}
+          <span class="page-link" aria-disabled="true">上一页</span>
+        {% endif %}
       </li>
       {% if paginator.page_trail %}
         {% for trail in paginator.page_trail %}
-          <li class="page-item {% if page.url == trail.path %}active{% endif %}">
-            <a class="page-link" href="{{ trail.path | relative_url }}" title="{{trail.title}}">{{ trail.num }}</a>
+          <li class="page-item {% if paginator.page == trail.num %}active{% endif %}">
+            <a class="page-link" href="{{ trail.path | relative_url }}" title="{{ trail.title }}" {% if paginator.page == trail.num %}aria-current="page"{% endif %}>{{ trail.num }}</a>
           </li>
         {% endfor %}
       {% endif %}
       <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
-        <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Older</a>
+        {% if paginator.next_page %}
+          <a class="page-link" href="{{ paginator.next_page_path | relative_url }}" rel="next">下一页</a>
+        {% else %}
+          <span class="page-link" aria-disabled="true">下一页</span>
+        {% endif %}
       </li>
     </ul>
   </nav>
