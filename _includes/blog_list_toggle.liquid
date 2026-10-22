@@ -1,0 +1,4 @@
+<div class="blog-list-toolbar">
+  <span class="blog-total">{% if page.posts %}{{ page.posts | size }}{% else %}{{ site.posts | size }}{% endif %} 篇文章</span>
+  <button class="blog-list-toggle" type="button" data-article-list-toggle aria-controls="blog-content" aria-expanded="{% if page.pagination.enabled %}false{% else %}true{% endif %}" hidden>{% if page.pagination.enabled %}展开全部文章 ↓{% else %}折叠全部文章 ↑{% endif %}</button>
+</div>

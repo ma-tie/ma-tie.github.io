@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div class="blog-grid">
+  <section class="blog-main{% if page.pagination.enabled %} blog-list-collapsed{% endif %}" id="blog-content" aria-label="博客文章">
+    {{ content }}
+  </section>
+  {% include blog_sidebar.liquid %}
+</div>

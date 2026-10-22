@@ -10,3 +10,6 @@ Gemfile.lock
 node_modules/
 vendor
 assets/json/resume.json
+
+# Private local Markdown notes (never commit).
+*_internal.md

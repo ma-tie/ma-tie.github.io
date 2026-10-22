@@ -16,7 +16,9 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  {% assign blog_view = false %}
+  {% if page.url contains '/blog/' %}{% assign blog_view = true %}{% endif %}
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {% if blog_view %}blog-shell{% endif %}">
     <!-- Header -->
     {% include header.liquid %}
 

@@ -1,0 +1,31 @@
+{% assign article_url = post.url %}
+{% if post.redirect %}{% assign article_url = post.redirect %}{% endif %}
+{% assign card_image = post.thumbnail %}
+<article class="blog-card{% if post.featured %} blog-card-featured{% endif %}">
+  {% if card_image %}
+    <a class="blog-card-image" href="{{ article_url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ card_image | relative_url }}" alt="" loading="lazy"></a>
+  {% endif %}
+  <div class="blog-card-body">
+    {% if post.featured %}<p class="blog-featured-label"><i class="fa-solid fa-thumbtack" aria-hidden="true"></i> 精选</p>{% endif %}
+    <h2><a href="{{ article_url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="blog-card-summary">{% include blog_summary.liquid %}</p>
+    {% assign read_time = post.content | strip_html | number_of_words: 'auto' | divided_by: 180 | plus: 1 %}
+    <div class="blog-card-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}"><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%Y-%m-%d' }}</time>
+      <span><i class="fa-regular fa-clock" aria-hidden="true"></i> {{ read_time }} 分钟</span>
+      <div class="blog-card-categories">
+        {% for category in post.categories %}
+          <a href="{{ category | slugify | prepend: '/blog/category/' | append: '/' | relative_url }}">{{ category }}</a>
+        {% endfor %}
+      </div>
+      {% if post.tags.size > 0 %}
+        <div class="blog-card-tags">
+          {% for tag in post.tags %}
+            <a href="{{ tag | slugify | prepend: '/blog/tag/' | append: '/' | relative_url }}">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if post.external_source %}<span>{{ post.external_source }}</span>{% endif %}
+    </div>
+  </div>
+</article>

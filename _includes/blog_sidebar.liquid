@@ -1,0 +1,36 @@
+<aside class="blog-sidebar" id="blog-navigation" aria-label="博客导航">
+  <section class="blog-widget">
+    <h2><i class="fa-regular fa-folder" aria-hidden="true"></i> 分类</h2>
+    <div class="blog-category-list">
+      {% assign categories = site.categories | sort %}
+      {% for category in categories %}
+        {% assign category_url = category[0] | slugify | prepend: '/blog/category/' | append: '/' %}
+        <a href="{{ category_url | relative_url }}" {% if page.type == 'category' and page.title == category[0] %}aria-current="page"{% endif %}>
+          <span>{{ category[0] }}</span><span class="blog-count">{{ category[1] | size }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="blog-widget">
+    <h2><i class="fa-solid fa-hashtag" aria-hidden="true"></i> 全部标签 <span class="blog-widget-count">{{ site.tags | size }}</span><button class="blog-tags-toggle" type="button" aria-controls="blog-sidebar-tags" aria-expanded="false" hidden>展开 ↓</button></h2>
+    <div class="blog-tag-cloud" id="blog-sidebar-tags" data-collapsible-tags>
+      {% assign tags = site.tags | tags_by_frequency %}
+      {% for tag in tags %}
+        {% assign tag_url = tag[0] | slugify | prepend: '/blog/tag/' | append: '/' %}
+        <a href="{{ tag_url | relative_url }}" {% if page.type == 'tag' and page.title == tag[0] %}aria-current="page"{% endif %}>
+          {{- tag[0] }} <span>{{ tag[1] | size }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="blog-widget">
+    <h2><i class="fa-regular fa-calendar" aria-hidden="true"></i> 年份归档</h2>
+    <div class="blog-category-list">
+      {% assign years = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+      {% for year in years %}
+        <a href="{{ year.name | prepend: '/blog/' | append: '/' | relative_url }}"><span>{{ year.name }}</span><span class="blog-count">{{ year.items | size }}</span></a>
+      {% endfor %}
+    </div>
+    <a class="blog-archive-link" href="{{ '/feed.xml' | relative_url }}">RSS 订阅 <i class="fa-solid fa-rss" aria-hidden="true"></i></a>
+  </section>
+</aside>
