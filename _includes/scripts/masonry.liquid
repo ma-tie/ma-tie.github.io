@@ -1,4 +1,4 @@
-{% if site.enable_masonry %}
+{% if site.enable_masonry and page.permalink == '/projects/' or site.enable_masonry and page.masonry %}
   <!-- Masonry & imagesLoaded -->
   <script
     defer

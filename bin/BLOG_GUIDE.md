@@ -63,6 +63,10 @@ toc:
 
 ## 博客布局
 
+仅博文正文使用 `jekyll-commonmark` / `libcmark-gfm` 解析（GFM：表格、任务列表、删除线、自动链接、脚注），由 `_plugins/blog-markdown.rb` 选择独立转换器和缓存；其他页面保留 Kramdown，避免 Publications 的模板 HTML 被当作缩进代码块。代码继续由 Rouge 高亮。排版使用本地固定版本 `github-markdown-css 5.9.0`，仅作用于正文 `#markdown-content.markdown-body`，随网站明暗主题切换。正文采用 GitHub 的 16px 字号、1.5 倍行高和 400 常规字重。
+
+样式和许可证位于 `assets/css/github-markdown/`。从 npm 下载同版本 tarball 后，可用 `python3 bin/update-github-markdown-css.py /path/to/github-markdown-css-5.9.0.tgz` 重新生成；主题适配在 `_sass/_blog.scss`。
+
 博客列表参考 Stack 的卡片与右侧导航结构：主栏每页 100 篇，右侧显示两个分类、全部标签及文章数、年份归档与 RSS。分类、标签和年份归档页沿用相同侧栏；移动端侧栏排在列表下方。
 
 卡片底部依次显示日期、阅读时长、分类和标签。侧栏标签按文章数量从多到少排序，默认显示四行，可用标题行的按钮展开或收起。文章列表支持一键展开/折叠：博客首页默认折叠，标签、分类和年份页默认展开；折叠时保留标题、基本信息和标签。博客配色沿用全站主题变量。

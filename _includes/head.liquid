@@ -4,13 +4,7 @@
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
-<!-- <link rel="stylesheet" href="{{ '/assets/css/mdb.min.css' | relative_url | bust_file_cache }}"> -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{ site.mdb.version }}/css/mdb.min.css"
-  integrity="{{ site.mdb.integrity.css }}"
-  crossorigin="anonymous"
->
+<link rel="stylesheet" href="{{ '/assets/css/mdb.min.css' | relative_url | bust_file_cache }}">
 
 <!-- Bootstrap Table -->
 {% if page.pretty_table %}
@@ -19,12 +13,7 @@
 
 <!-- Fonts & Icons -->
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
-<link
-  defer
-  rel="stylesheet"
-  type="text/css"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
->
+<link rel="stylesheet" href="{{ '/assets/css/roboto.css' | relative_url | bust_file_cache }}">
 
 <!-- Code Syntax Highlighting -->
 <link
@@ -50,6 +39,10 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+{% if page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ '/assets/css/github-markdown/github-markdown.css' | relative_url | bust_file_cache }}">
+  <link rel="stylesheet" href="{{ '/assets/css/github-markdown/rouge.css' | relative_url | bust_file_cache }}">
+{% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- Dark Mode -->

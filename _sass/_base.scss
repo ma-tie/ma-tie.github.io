@@ -457,13 +457,16 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  font-size: 0.75rem;
+  background-color: var(--global-footer-bg-color);
 
   .container {
     text-align: center;
+    color: var(--global-footer-text-color);
   }
+  a { color: var(--global-footer-link-color); }
 }
 
 // CV
@@ -1121,11 +1124,12 @@ swiper-container {
 }
 
 .clustrmaps {
-  margin: 15% 0% 8% 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 50px;
-  width: 50%;
+  // The globe reads its parent's width and includes a shadow below the sphere.
+  // Keep it in normal flow; the former 50px flex box overflowed into the text.
+  margin: 2rem auto 1.33rem;
+  display: block;
+  width: 213.33px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 320 / 346;
 }

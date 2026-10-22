@@ -46,7 +46,7 @@ rss_icon: false
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 
 # Dimensions
 max_width: 800px
@@ -200,6 +200,9 @@ kramdown:
     block:
       line_numbers: false
       start_line: 1
+commonmark:
+  options: ["UNSAFE", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter", "tasklist"]
 
 # Includes & excludes
 include: ["_pages"]
