@@ -1,0 +1,50 @@
+#search-toggle {
+  background: transparent;
+  border: 0;
+  color: var(--global-text-color);
+  cursor: pointer;
+  font: inherit;
+
+  &:hover { color: var(--global-theme-color); }
+  &:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+}
+
+.search-shortcut { margin-left: 0.3rem; font-size: 0.75rem; opacity: 0.65; }
+
+ninja-keys {
+  --ninja-z-index: 2000;
+  --ninja-width: 680px;
+  --ninja-top: 12vh;
+  --ninja-font-family: inherit;
+  --ninja-accent-color: var(--global-theme-color);
+  --ninja-text-color: var(--global-text-color);
+  --ninja-selected-text-color: var(--global-text-color);
+  --ninja-secondary-text-color: var(--global-text-color-light);
+  --ninja-group-text-color: var(--global-text-color-light);
+
+  &.dark {
+    --ninja-text-color: var(--global-text-color);
+    --ninja-selected-text-color: var(--global-text-color);
+    --ninja-accent-color: var(--global-theme-color);
+  }
+}
+
+// The official component exports these parts for theme overrides.
+ninja-keys::part(ninja-input-wrapper) { background: var(--global-bg-color); }
+ninja-keys::part(ninja-input) { color: var(--global-text-color); }
+
+.search-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.75rem;
+  color: var(--global-text-color-light);
+  border-top: 1px solid var(--global-divider-color);
+}
+
+@media (max-width: 575px) {
+  ninja-keys { --ninja-width: calc(100% - 24px); --ninja-top: 8vh; --ninja-actions-height: 45vh; }
+  .search-shortcut { display: none; }
+}

@@ -1,0 +1,15 @@
+{% if site.search_enabled %}
+  <ninja-keys
+    hideBreadcrumbs
+    noAutoLoadMdIcons
+    placeholder="搜索标题、正文或标签…"
+    data-index-url="{{ '/assets/search-data.json' | relative_url }}"
+    aria-label="站内搜索"
+  >
+    <div slot="footer" class="search-footer">
+      <span role="status" aria-live="polite" id="search-status">正在加载搜索索引…</span>
+      <span>↑ ↓ 选择 · Enter 打开 · Esc 关闭</span>
+    </div>
+  </ninja-keys>
+  <script type="module" src="{{ '/assets/js/site-search.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}

@@ -107,6 +107,14 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          {% if site.search_enabled %}
+            <li class="nav-item">
+              <button id="search-toggle" class="nav-link" type="button" title="搜索（Ctrl / ⌘ K）" aria-label="搜索网站" aria-keyshortcuts="Control+k Meta+k">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <span class="search-shortcut" aria-hidden="true">⌘ K</span>
+              </button>
+            </li>
+          {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">

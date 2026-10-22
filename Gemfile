@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'
+    gem 'al_search', '= 1.0.3'
     gem 'jekyll-commonmark', '~> 1.4'
     gem 'jekyll-archives'
     gem 'jekyll-email-protect'
