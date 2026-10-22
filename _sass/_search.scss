@@ -9,8 +9,6 @@
   &:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
 }
 
-.search-shortcut { margin-left: 0.3rem; font-size: 0.75rem; opacity: 0.65; }
-
 ninja-keys {
   --ninja-z-index: 2000;
   --ninja-width: 680px;
@@ -46,5 +44,4 @@ ninja-keys::part(ninja-input) { color: var(--global-text-color); }
 
 @media (max-width: 575px) {
   ninja-keys { --ninja-width: calc(100% - 24px); --ninja-top: 8vh; --ninja-actions-height: 45vh; }
-  .search-shortcut { display: none; }
 }
