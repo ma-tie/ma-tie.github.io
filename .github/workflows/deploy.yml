@@ -10,6 +10,8 @@ on:
       - "**.html"
       - "**.js"
       - "**.liquid"
+      - "**/*.rb"
+      - "Gemfile"
       - "**/*.md"
       - "**.yml"
       - "!.github/workflows/axe.yml"
@@ -34,6 +36,8 @@ on:
       - "**.html"
       - "**.js"
       - "**.liquid"
+      - "**/*.rb"
+      - "Gemfile"
       - "**/*.md"
       - "**.yml"
       - "!.github/workflows/axe.yml"
@@ -73,6 +77,8 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Check CSS cache invalidation
+        run: bundle exec ruby bin/test-cache-bust.rb
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
