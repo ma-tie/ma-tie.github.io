@@ -1,3 +1,5 @@
 <div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+  {% bibliography --group_by none --query @*[selected=true && abbr=NSDI]* %}
+  {% bibliography --group_by none --query @*[selected=true && abbr=INFOCOM]* %}
+  {% bibliography --group_by none --query @*[selected=true && abbr!=NSDI && abbr!=INFOCOM]* %}
 </div>
