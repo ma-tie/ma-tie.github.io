@@ -4,8 +4,6 @@ import "../al_search/js/search-setup.js";
 
 const search = document.querySelector("ninja-keys");
 const status = document.getElementById("search-status");
-const shortcut = document.querySelector(".search-shortcut");
-if (shortcut) shortcut.textContent = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘ K" : "Ctrl K";
 
 const syncTheme = () => search.classList.toggle("dark", document.documentElement.dataset.theme === "dark");
 syncTheme();
