@@ -1,8 +1,10 @@
-<div class="visitor-map">
-  <script
-    async
-    type="text/javascript"
-    id="mapmyvisitors"
-    src="https://mapmyvisitors.com/map.js?d=0THz-pS51AQ-cscSN6RXYrHcP5ZVCAWqiM3EcSoQHSQ&cl=ffffff&w=a"
-  ></script>
-</div>
+{% if jekyll.environment == 'production' %}
+  <div class="visitor-map">
+    <script
+      async
+      type="text/javascript"
+      id="mapmyvisitors"
+      src="https://mapmyvisitors.com/map.js?d=0THz-pS51AQ-cscSN6RXYrHcP5ZVCAWqiM3EcSoQHSQ&cl=ffffff&w=a"
+    ></script>
+  </div>
+{% endif %}
