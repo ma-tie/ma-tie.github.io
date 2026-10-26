@@ -1123,13 +1123,10 @@ swiper-container {
   --swiper-pagination-bullet-inactive-color: var(--global-text-color);
 }
 
-.clustrmaps {
-  // The globe reads its parent's width and includes a shadow below the sphere.
-  // Keep it in normal flow; the former 50px flex box overflowed into the text.
+.visitor-map {
   margin: 2rem auto 1.33rem;
   display: block;
   width: 213.33px;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 320 / 346;
 }
